@@ -150,6 +150,19 @@
     border-color: white;
 }
 
+/* Card action buttons */
+.card-actions {
+    margin-top: 0.75rem;
+}
+.card-actions .btn {
+    border-radius: 8px;
+    padding: 0.35rem 0.7rem;
+    font-weight: 600;
+}
+.card-actions .btn + .btn {
+    margin-left: 0.5rem;
+}
+
 /* Navigation */
 .navbar {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
