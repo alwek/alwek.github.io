@@ -12,16 +12,19 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#home">Alican Bircan</a>
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand fw-bold me-2" href="#home">Alican Bircan</a>
+                <span class="typed" style="color: white; font-size: 0.9rem; opacity: 0.8;"></span>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-person-fill me-2"></i>About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="bi bi-tools me-2"></i>Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"><i class="bi bi-briefcase-fill me-2"></i>Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education"><i class="bi bi-mortarboard-fill me-2"></i>Education</a></li>
                 </ul>
             </div>
         </div>
@@ -201,9 +204,9 @@
                             Develop and maintain tools for the Frostbite game engine, focusing on workflows for engine development and content creation. Work on features supporting multiple game titles, addressing technical challenges across rendering, animation, physics, and other engine domains.
                         </p>
                         <ul class="text-muted">
-                            <li>Frostbite Engine</li>
-                            <li>Battlefield 6</li>
-                            <li>FC, Madden, Dragon Age and more!</li>
+                            <li><i class="bi bi-controller me-2"></i>Frostbite Engine</li>
+                            <li><i class="bi bi-controller me-2"></i>Battlefield 6</li>
+                            <li><i class="bi bi-controller me-2"></i>FC, Madden, Dragon Age and more!</li>
                         </ul>
                     </div>
                 </div>
@@ -230,8 +233,8 @@
                             Delivered software solutions for insurance and healthcare clients, including backend services, API development, and full-stack application development.
                         </p>
                         <ul class="text-muted">
-                            <li>Bliwa Livsförsäkringar</li>
-                            <li>1177 Vårdguiden</li>
+                            <li><i class="bi bi-buildings me-2"></i>Bliwa Livsförsäkringar</li>
+                            <li><i class="bi bi-buildings me-2"></i>1177 Vårdguiden</li>
                         </ul>
                     </div>
                 </div>
@@ -258,10 +261,10 @@
                             Developed backend systems and applications for financial institutions and government agencies, focusing on system reliability and data integrity.
                         </p>
                         <ul class="text-muted">
-                            <li>Länsförsäkringar</li>
-                            <li>Skatteverket</li>
-                            <li>Cancerfonden</li>
-                            <li>Stockholmshem Störningsjouren</li>
+                            <li><i class="bi bi-buildings me-2"></i>Länsförsäkringar</li>
+                            <li><i class="bi bi-buildings me-2"></i>Skatteverket</li>
+                            <li><i class="bi bi-buildings me-2"></i>Cancerfonden</li>
+                            <li><i class="bi bi-buildings me-2"></i>Stockholmshem Störningsjouren</li>
                         </ul>
                     </div>
                 </div>
@@ -418,5 +421,47 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+    <script>
+        // Initialize Typed.js for navbar subtitle
+        new Typed('.typed', {
+            strings: ['Software Engineer', 'Full-Stack Developer', 'Problem Solver'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        
+        // Check for saved theme preference or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        
+        // Apply saved theme on page load
+        htmlElement.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+        
+        // Theme toggle click handler
+        themeToggle.addEventListener('click', () => {
+            const theme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateThemeIcon(theme);
+        });
+        
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('i');
+            if (theme === 'dark') {
+                icon.classList.remove('bi-moon-fill');
+                icon.classList.add('bi-sun-fill');
+            } else {
+                icon.classList.remove('bi-sun-fill');
+                icon.classList.add('bi-moon-fill');
+            }
+        }
+    </script>
 </body>
 </html>

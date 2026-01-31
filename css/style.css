@@ -82,7 +82,8 @@
 }
 
 .card-body ul {
-    padding-left: 1.5rem;
+    padding-left: 0;
+    list-style: none;
 }
 
 .card-body ul li {
@@ -198,14 +199,27 @@
     font-size: 1.5rem;
 }
 
+.typed {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    transform: translateY(3px);
+}
+
 .nav-link {
     margin-left: 1rem;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border 0.3s ease, border-radius 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem !important;
+    color: white !important;
 }
 
 .nav-link:hover {
     color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
 }
 
 /* Image styling */
