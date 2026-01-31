@@ -222,6 +222,17 @@
     border-radius: 8px;
 }
 
+#pdf-download {
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+#pdf-download:hover {
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+}
+
 /* Image styling */
 img.rounded-circle {
     max-width: 300px;
@@ -391,4 +402,3 @@ footer p {
         width: 100%;
     }
 }
-
