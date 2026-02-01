@@ -104,6 +104,41 @@
     color: white;
 }
 
+.badge.bg-palette-1 {
+    background-color: #764ba2 !important;
+    color: white;
+}
+
+.badge.bg-palette-2 {
+    background-color: #4c4452 !important;
+    color: white;
+}
+
+.badge.bg-palette-3 {
+    background-color: #b1a8b9 !important;
+    color: white;
+}
+
+.badge.bg-palette-4 {
+    background-color: #007361 !important;
+    color: white;
+}
+
+.badge.bg-palette-5 {
+    background-color: #00a993 !important;
+    color: white;
+}
+
+.badge.bg-palette-6 {
+    background-color: #0098a6 !important;
+    color: white;
+}
+
+.badge.bg-palette-7 {
+    background-color: #007bc2 !important;
+    color: white;
+}
+
 .badge.bg-success {
     background-color: #198754 !important;
     color: white;
