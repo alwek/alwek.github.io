@@ -338,6 +338,14 @@ footer p {
     .d-flex.gap-4 {
         gap: 0.5rem !important;
     }
+
+    .name-smallscreen {
+        text-align: center;
+    }
+
+    .image-smallscreen {
+        display: none !important;
+    }
 }
 
 /* Timeline header responsiveness: keep badges and action button inside the card */
